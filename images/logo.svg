@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" role="img" aria-label="Minimal residential area logo">
+  <title>Minimal residential area logo (circular)</title>
+
+  <!-- Colors -->
+  <!-- Red: #C62828, Grey buildings: #7a8083, Dark grey stroke: #2f3a3f, Orange sun: #FF941A -->
+
+  <!-- outer circle badge -->
+  <circle cx="250" cy="250" r="240" fill="#ffffff" stroke="#A44A4A" stroke-width="18"></circle>
+
+  <!-- ground baseline (subtle) -->
+  <rect x="70" y="280" width="350" height="30" fill="green" opacity="0.5" rx="4"></rect>
+
+  <!-- BACKGROUND: skyscrapers (drawn first so they sit behind houses) -->
+  <g id="skyscrapers" transform="translate(0,0)" opacity="1">
+    <!-- skyscraper 1 (left) -->
+    <g id="skyscraper-1" transform="translate(120,120)">
+      <rect x="0" y="0" width="70" height="160" rx="4" fill="#6e7376" stroke="#2f3a3f" stroke-width="4"></rect>
+      <!-- small windows (editable) -->
+      <g id="sk1-windows" fill="#eaf6fa">
+        <rect x="10" y="16" width="12" height="12" rx="2"></rect>
+        <rect x="34" y="16" width="12" height="12" rx="2"></rect>
+        <rect x="10" y="40" width="12" height="12" rx="2"></rect>
+        <rect x="34" y="40" width="12" height="12" rx="2"></rect>
+        <rect x="10" y="64" width="12" height="12" rx="2"></rect>
+        <rect x="34" y="64" width="12" height="12" rx="2"></rect>
+        <rect x="10" y="88" width="12" height="12" rx="2"></rect>
+        <rect x="34" y="88" width="12" height="12" rx="2"></rect>
+      </g>
+    </g>
+
+    <!-- skyscraper 2 (center, taller) -->
+    <g id="skyscraper-2" transform="translate(215,90)">
+      <rect x="0" y="0" width="60" height="200" rx="3" fill="#6e7376" stroke="#2f3a3f" stroke-width="4"></rect>
+      <rect x="18" y="8" width="12" height="184" fill="#2f3a3f" opacity="0.12"></rect>
+      <g id="sk2-windows" fill="#eaf6fa">
+        <!-- three columns of windows -->
+        <g transform="translate(6,12)">
+          <rect x="0" y="0" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="20" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="40" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="60" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="80" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="100" width="12" height="10" rx="1"></rect>
+        </g>
+        <g transform="translate(26,12)">
+          <rect x="0" y="0" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="20" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="40" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="60" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="80" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="100" width="12" height="10" rx="1"></rect>
+        </g>
+        <g transform="translate(46,12)">
+          <rect x="0" y="0" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="20" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="40" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="60" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="80" width="12" height="10" rx="1"></rect>
+          <rect x="0" y="100" width="12" height="10" rx="1"></rect>
+        </g>
+      </g>
+    </g>
+
+    <!-- skyscraper 3 (right) -->
+    <g id="skyscraper-3" transform="translate(295,140)">
+      <rect x="0" y="0" width="56" height="140" rx="4" fill="#7a8083" stroke="#2f3a3f" stroke-width="4"></rect>
+      <g id="sk3-windows" fill="#eaf6fa">
+        <rect x="8" y="14" width="12" height="10" rx="1"></rect>
+        <rect x="36" y="14" width="12" height="10" rx="1"></rect>
+        <rect x="8" y="36" width="12" height="10" rx="1"></rect>
+        <rect x="36" y="36" width="12" height="10" rx="1"></rect>
+        <rect x="8" y="58" width="12" height="10" rx="1"></rect>
+        <rect x="36" y="58" width="12" height="10" rx="1"></rect>
+      </g>
+    </g>
+  </g>
+
+  <!-- ORANGE SUN (behind buildings slightly to right) -->
+  <circle id="sun" cx="308" cy="108" r="30" fill="#FF941A" opacity="1"></circle>
+
+  <!-- FOREGROUND: two houses close together (centered, in front) -->
+  <g id="houses">
+    <!-- House 1 (left) -->
+    <g id="house-1" transform="translate(160,235)">
+      <!-- base shadow -->
+      <rect x="0" y="0" width="120" height="60" rx="6" fill="#ffffff" stroke="#2f3a3f" stroke-width="4"></rect>
+      <!-- roof -->
+      <path d="M -10 0 L 60 -36 L 130 0 Z" fill="#A44A4A" stroke="#2f3a3f" stroke-width="4"></path>
+      <!-- door and window -->
+      <rect x="48" y="20" width="20" height="36" rx="2" fill="brown"></rect>
+      <rect x="18" y="22" width="20" height="16" rx="2" fill="#eaf6fa" stroke="black"></rect>
+    </g>
+
+    <!-- House 2 (right, slightly overlapping) -->
+    <g id="house-2" transform="translate(250,235)">
+      <rect x="0" y="0" width="100" height="60" rx="6" fill="#ffffff" stroke="#2f3a3f" stroke-width="4"></rect>
+      <path d="M -8 0 L 50 -30 L 108 0 Z" fill="#876F6F" stroke="#2f3a3f" stroke-width="4"></path>
+      <rect x="36" y="22" width="20" height="36" rx="2" fill="brown"></rect>
+      <rect x="10" y="22" width="16" height="16" rx="2" fill="#eaf6fa" stroke="black"></rect>
+    </g>
+  </g>
+
+  <!-- tiny accessibility helper (no visible text) -->
+  <title id="logoTitle">Minimal residential area logo in a red circular badge</title>
+
+  <!--
+    Editing notes (for your editor):
+    - Each building is a <g> with its own id: skyscraper-1, skyscraper-2, skyscraper-3, house-1, house-2.
+    - Move a building by changing its group's transform (translate).
+    - Change fills/strokes to recolor.
+    - Hide a group with style="display:none" on the <g id="...">.
+  -->
+</svg>

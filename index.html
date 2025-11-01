@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tafadzwa Chingore’s WDD 231 Home Page">
+  <meta name="author" content="Tafadzwa Chingore">
+  <title> Home|Tafadzwa Chingore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="images/home-logo.svg" alt="Site Logo" class="logo">
+      <span class="site-name">Tafadzwa Chingore</span>
+    </div>
+
+    <button id="menu-toggle" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#">Chamber Project</a></li>
+      <li><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="top-row-flex">
+      <!-- About Me Section -->
+      <section class="card about-me">
+        <h2>About Me</h2>
+        <p>
+          My name is Tafadzwa Chingore. I live in Harare, the capital city of Zimbabwe. I enjoy reading, playing video games, site seeing, and going to church. I am passionate about child rights, STEM, and writing fictional stories.
+        </p>
+      </section>
+
+      <!-- Student Photo Section -->
+      <section class="card student-photo">
+        <h2>Student Photo</h2>
+        <img src="images/profile.webp" alt="Tafadzwa Chingore's Picture" loading="lazy">
+      </section>
+    </div>
+
+    <!-- Web Certificate Courses Section -->
+    <section class="card courses-section">
+      <h2>Web Certificate Courses</h2>
+      <div class="course-filters">
+        <button id="filter-all" class="active">All Courses</button>
+        <button id="filter-cse">CSE</button>
+        <button id="filter-wdd">WDD</button>
+      </div>
+
+      <div class="course-list-container">
+      </div>
+
+      <p class="credit-total">The total credits for courses listed above is <span id="total-credits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <!-- SOCIAL MEDIA ICONS -->
+      <a href="https://www.instagram.com/youthandfamilyhub/" target="_blank"><img src="images/instagram.svg" alt="Instagram" width="16" height="16"></a> <!--_blank opens link in new tab-->
+      <a href="https://github.com/tafadzwabchingore" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a> 
+      <a href="https://www.linkedin.com/in/tafadzwa-chingore-b42622242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8jmWj2mhTy%2B5lpzS4GTwZg%3D%3D" target="_blank"><img src="images/linkedin.svg" alt="Linkedin" width="16" height="16"></a>
+    </div>
+    <p>&copy;<span id="currentyear"></span> 💻 Tafadzwa Chingore's WDD230 Course Project 💻 📍Harare, Zimbabwe 🌇</p>
+    <p>🦋Last Modified: <span id="lastModified"></span>🦋</p>
+  </footer>
+  <script src="scripts/get-dates.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</body>
+
+</html>

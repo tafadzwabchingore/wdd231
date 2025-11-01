@@ -1,0 +1,148 @@
+/************************* Color Scheme *************************
+#876F6F - Roof Terracotta grey
+#A44A4A - Ferra red-brown
+#f6dada - Light pink
+
+Palette Course Home Page:
+    Deep purple (canopy): #6E3FA0
+    Light purple (petal highlights): #A77EE0
+    White accents: #FFFFFF
+    Trunk brown: #593E2E (used muted, visible in purple variant)
+    Ground grey/pale: #F5F3F8
+*/
+
+/************************* Site Wide ****************************/
+
+/************************* Header ******************************/
+header {
+    display: grid;
+    grid-template-columns: 80px auto 44px; /* Dispalys items from left to right, logo sitename hamburger button*/
+    padding: 5px 0 5px 10px; /* top right-side bottom left to fix the space around the header */
+    align-items: end; /* Aligns items to the bottom of the header */
+    border-bottom: solid 1px #876F6F;
+    column-gap: 8px; /* space between the columns, the logo and site name */
+}
+
+header img {
+    display: block; /* By default all images are inline elements */
+    width: 100%; /* Makes the image take up the full width of its container */
+    height: auto; /* Maintains the aspect ratio of the image so that it scales and does not distort the image */
+    padding-bottom: 5px;
+}
+
+header span {
+    font-size: 2.5rem;
+    color: #A44A4A;
+}
+
+/********************** Hamburger Navigation ***********************/
+.hambuger {
+    background: none;
+    border: none;
+    color: #A44A4A;
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hambuger::before {
+    content: "\2630"; /* Unicode for hamburger icon */
+    font-size: 2rem; /* Controls the size of the hamburger icon */
+}
+
+.hambuger.show::before {
+    content: "\00D7"; /* Unicode for multiplication entity */
+}
+
+/********************** Larger Screens Navigation ***********************/
+.navigation {
+    display: none; /* Hides the nav tag by default */
+}
+.navigation.show {
+    display: block; /* Displays the nav tag when the 'show' class is added &  Items align top to bottom  */
+}
+
+.navigation ul {
+    
+    list-style-type: none; /* removes the default bullet points from the list items */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block; /* makes the entire area of the link clickable */
+    padding: .8rem 10px; /* right and left padding creates space around the text */
+    color: #876F6F;
+    text-decoration: none; /* removes the default underline from links */
+    border-bottom: solid 1px #A44A4A;
+}
+
+.navigation li.current {
+    background-color: #f6dada;
+}
+
+.navigation a:hover {
+    background-color: #876F6F;
+    color: white;
+}
+
+h1 {
+    margin-left: 10px;
+    color: #A44A4A;
+}
+
+/************************* Main ******************************/
+:root {
+  --primary-color: #552b82;
+  --secondary-color: #6E3FA0;
+  --accent-color: #552b82;
+  --accent-compliant-color: #6E3FA0;
+  --completed-color-compliant: #6E3FA0;
+  --completed-color: #A77EE0;
+  --text-light: #ecf0f1;
+  --text-dark: #552b82;
+  --bg-light: #f8f9fa;
+  --bg-card: #ffffff;
+  --border-color: #bdc3c7;
+  --hover-color: #A77EE0;
+
+  /* Centralized accessible color tokens */
+  --accent-high-contrast: #552b82;
+  --accent-high-contrast-hover: #A77EE0;
+  --accent-high-contrast-text: #ffffff;
+  --total-credits-color: #552b82;
+  --completed-text-color: #ffffff;
+  --focus-outline: #A77EE0;
+}
+
+
+/************************* Footer ******************************/
+footer {
+    background-color: #f6dada;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex; /* Items align left to right */
+    justify-content: center; /* Centers the items left to right */
+    column-gap: 10px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center; /* Centers the items left to right */
+    align-items: center; /* Centers the items top to bottom */
+    width: 44px; /* Minimum size for clickable area - Apple */
+    height: 44px;
+    border: solid 1px #A44A4A;
+    border-radius: 4px; /* makes the corners fully rounded use 22px next*/
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: #876F6F;
+}

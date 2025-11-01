@@ -1,0 +1,29 @@
+@media only screen and (min-width: 319px) {
+
+    header, nav, main, footer {
+        max-width: 900px;
+        margin: 0 auto; /* centers the elements horizontally 0 = top and bottom, auto = left and right*/
+    }
+
+    header {
+        grid-template-columns: 80px auto; /* removes third colum meant for hambrger button, logo site-name */
+    }
+
+    .hambuger {
+        display: none; /* hides the hamburger button on larger screens */
+    }
+
+    .navigation {
+        display: block; /* display the nav tag even if it does not have the 'show' class added */
+        border-bottom: solid 1px #876F6F;
+    }
+
+    .navigation ul {
+        display: flex; /* displays the list items in a row instead of a column */
+    }
+
+    .navigation a {
+        border: none;
+    }
+    
+}
