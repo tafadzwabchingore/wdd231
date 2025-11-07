@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WDD 231 - Web Frontend Development 1 Chamber of Commerce Directory Page">
     <meta name="author" content="Tafadzwa Chingore">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
     <meta property="og:title" content="Tafadzwa Chingore - WDD 231 - Web Frontend Development Chamber of Commerce Directory">
     <meta property="og:description" content="Madokero Chamber of Commerce Directory Page for WDD 231 - Web Frontend Development 1">
     <meta property="og:type" content="website">
@@ -14,13 +15,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=family=Rock+Salt&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <title>Madokero Chamber of Commerce Directory Page</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Site Logo" class="logo">
+            <span class="site-title">Madokero Chamber of Commerce</span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-icons">
+            <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                ☰
+            </button>
+        </div>
+    </header>
+    <div>
+        <img class="hero" src="images/hero.webp" alt="Zimbabwe National Chamber of Commerce Staff" loading="lazy">
+        <div class="hero-overlay">
+            <a href="join.html" class="join-btn">Join Now</a>
+        </div>
+    </div>
+    <main>
+        <h1>Directory</h1>
+
+        <!-- Member Directory Section -->
+         <div class="view-toggle">
+            <button id="gridViewBtn">Grid View</button>
+            <button id="listViewBtn">List View</button>
+        </div>
+
+        <section id="memberContainer" class="grid-view">
+            <!-- Member cards will be dynamically inserted here -->
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-column left">
+            <h3>Chamber of Commerce</h3>
+            <p>123 Main Street<br>Springfield, USA<br>📞 (555) 123-4567<br>✉️ info@chamber.org</p>
+        </div>
+
+        <div class="footer-column middle">
+            <!-- SOCIAL MEDIA ICONS -->
+            <a href="https://www.instagram.com/youthandfamilyhub/" target="_blank" aria-label="Instagram"><img src="../images/instagram.svg" alt="Instagram" width="16" height="16"></a> <!--_blank opens link in new tab-->
+            <a href="https://github.com/tafadzwabchingore" target="_blank" aria-label="GitHub"><img src="../images/github.svg" alt="GitHub" width="16" height="16"></a> 
+            <a href="https://www.linkedin.com/in/tafadzwa-chingore-b42622242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8jmWj2mhTy%2B5lpzS4GTwZg%3D%3D" target="_blank" aria-label="Linkedin"><img src="../images/linkedin.svg" alt="Linkedin" width="16" height="16"></a>
+        </div>
+
+        <div class="footer-column right">
+            <p>&copy; <span id="year"></span> Tafadzwa Chingore | WDD 231 Project</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/members.js"></script>
+    <script src="scripts/getDates.js"></script>
 </body>
 </html>

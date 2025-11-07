@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Madokero Auto Spares",
+        "address": "Shop 12, Madokero Mall, Madokero, Harare",
+        "phone": "+263 77 123 4567",
+        "website": "https://madokeroautospres.co.zw",
+        "image": "images/madokero-auto.webp",
+        "membershipLevel": 3,
+        "description": "Leading supplier of genuine auto parts and accessories in Madokero. Trusted by local mechanics and dealerships."
+    },
+    {
+        "name": "GreenView Landscaping",
+        "address": "Plot 4, Madokero Business Park, Harare",
+        "phone": "+263 71 654 7890",
+        "website": "https://greenviewlandscaping.co.zw",
+        "image": "images/greenview-landscaping.webp",
+        "membershipLevel": 2,
+        "description": "Providing eco-friendly landscaping and garden design services throughout Harare."
+    },
+    {
+        "name": "SmartTech Solutions",
+        "address": "Suite 8, Madokero Plaza, Harare",
+        "phone": "+263 78 908 1122",
+        "website": "https://smarttechsolutions.co.zw",
+        "image": "images/smarttech.webp",
+        "membershipLevel": 1,
+        "description": "Offering affordable IT support, networking, and web design for small businesses."
+    },
+    {
+        "name": "Madokero Fitness Centre",
+        "address": "Madokero Shopping Complex, Harare",
+        "phone": "+263 77 312 3344",
+        "website": "https://madokerofitness.co.zw",
+        "image": "images/madokero-fitness.webp",
+        "membershipLevel": 3,
+        "description": "Modern fitness gym with professional trainers, open 7 days a week."
+    },
+    {
+        "name": "Elite Bakehouse",
+        "address": "Stand 145, Madokero Crescent, Harare",
+        "phone": "+263 73 224 4455",
+        "website": "https://elitebakehouse.co.zw",
+        "image": "images/elite-bakehouse.webp",
+        "membershipLevel": 2,
+        "description": "Freshly baked bread, cakes, and pastries daily. We also cater for events and parties."
+    },
+    {
+        "name": "Madokero Medical Clinic",
+        "address": "5 Sunrise Road, Madokero, Harare",
+        "phone": "+263 78 556 6677",
+        "website": "https://madokeroclinic.co.zw",
+        "image": "images/madokero-clinic.webp",
+        "membershipLevel": 3,
+        "description": "Family-friendly clinic providing quality healthcare and medical checkups."
+    },
+    {
+        "name": "SolarBright Energy",
+        "address": "Unit 2, Madokero Industrial Park, Harare",
+        "phone": "+263 77 885 9988",
+        "website": "https://solarbrightenergy.co.zw",
+        "image": "images/solarbright-energy.webp",
+        "membershipLevel": 1,
+        "description": "Suppliers and installers of solar systems and energy-saving solutions."
+    }
+]
