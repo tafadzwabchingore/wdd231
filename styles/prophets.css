@@ -1,0 +1,97 @@
+/* General Styles */
+:root {
+    --primary-color: #3b5998; /* A shade of blue for headings/footer */
+    --secondary-color: #f7f7f7; /* Light background for body */
+    --card-bg: #e6e6fa; /* Lavender for card background (similar to screenshot) */
+    --card-border: #aaaaaa;
+    --text-dark: #222222;
+    --text-light: #555555;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* CSS Grid for Cards (Responsive layout) */
+#cards {
+    display: grid;
+    /* The key for responsiveness: auto-fit and a minimum column size of 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.5rem;
+}
+
+/* Individual Card Styling */
+section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+section p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+section p strong {
+    color: var(--text-dark);
+}
+
+section img {
+    width: 100%; /* Make images responsive within their card */
+    max-width: 300px; /* Max size for larger screens */
+    height: auto;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    margin-top: 10px;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}

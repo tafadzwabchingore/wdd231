@@ -1,0 +1,23 @@
+{
+  "family_name": "Chingore",
+  "move_in_date": "2024-06-24",
+  "number_of_people": 3,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Hilder Maseko",
+      "gender": "Female",
+      "birthdate": "1981-04-21"
+    },
+    {
+      "name": "Emmanuel Chingore",
+      "gender": "Male",
+      "birthdate": "1997-12-07"
+    },
+    {
+      "name": "Tafadzwa Chingore",
+      "gender": "Female",
+      "birthdate": "2001-11-16"
+    }
+  ]
+}
