@@ -6,7 +6,7 @@ const listViewBtn = document.getElementById('listViewBtn');
 // Fetch members from JSON
 async function fetchMembers() {
   try {
-    const response = await fetch('members.json');
+    const response = await fetch('data/members.json');
     if (!response.ok) throw new Error('Failed to fetch member data');
     const members = await response.json();
     displayMembers(members);
