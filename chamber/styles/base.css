@@ -177,6 +177,11 @@ main h1 {
 }
 
 /* Member section container */
+.grid-view h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 #memberContainer {
   width: 100%;
   display: flex;
