@@ -66,3 +66,48 @@
     max-width: 30%;
   }
 }
+
+/* --- Media Query for Larger Views (One Row Desktop View) --- */
+@media (min-width: 768px) {
+    .event-card {
+        /* Distribute space equally for 3 cards in one row */
+        flex: 1 1 calc(33.33% - 20px); 
+        min-width: 250px; 
+    }
+}
+
+/* Mobile: stacked */
+@media (max-width: 699px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop: 4 equal columns in one row */
+@media (min-width: 700px) {
+    .weather-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        align-items: start;
+    }
+
+    /* Heading 1 above card 1 */
+    .today-heading {
+        grid-column: 1 / 2;
+    }
+
+    /* Heading 2 above cards 2–4 */
+    .upcoming-heading {
+        grid-column: 2 / 5;
+        text-align: left;
+    }
+}
+
+/* --- Media Query for Larger Views (One Row Desktop View) --- */
+@media (min-width: 768px) {
+    .member-card-spotlight {
+        /* 3. Distribute space equally for 3 cards in one row */
+        flex: 1 1 calc(33.33% - 20px); 
+        min-width: 250px; 
+    }
+}

@@ -31,9 +31,13 @@ function displayMembers(members) {
         <p><strong>Phone:</strong> ${member.phone}</p>
         <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
         <p>${member.description}</p>
-        <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
+        <p class="membership-badge ${member.membershipLevel}"><strong>${member.membershipLevel} Member</p>
       </div>
     `;
+
+    const eligibleMembers = members.filter(
+      member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver' || member.membershipLevel === 'Bronze'
+    );
 
     memberContainer.appendChild(card);
   });

@@ -3,6 +3,14 @@
 #876F6F - Roof Terracotta grey
 #A44A4A - Ferra red-brown
 #f6dada - Light pink
+/*************************************Colors I am Using
+Roof Terracotta Grey - #876F6F
+Red - #C62828
+Orange Sun - #FF941A
+White - #fff
+Black
+**************************************/
+
 
 /* General Reset */
 * {
@@ -19,7 +27,7 @@ body {
 }
 
 body.dark {
-  background-color: #111;
+  background-color: black;
   color: #fff;
 }
 
@@ -31,7 +39,7 @@ body.dark {
   align-items: center;
   padding: 0.8rem 1rem;
   background-color: #876F6F;
-  color: white;
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -63,7 +71,7 @@ body.dark {
 .nav a {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  color: white;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -73,7 +81,7 @@ body.dark {
 
 nav a.active {
   background-color: #C62828;
-  color: white;
+  color: #fff;
 }
 
 /* Icons */
@@ -85,7 +93,7 @@ nav a.active {
 
 #theme-toggle {
   font-size: 1.5rem;
-  background: white;
+  background: #fff;
   border: none;
   cursor: pointer;
 }
@@ -97,41 +105,6 @@ nav a.active {
   color: #fff;
   cursor: pointer;
   display: none;
-}
-
-/* Hero section */
-.hero {
-  grid-row: 1;
-  grid-column: 1/5;
-  width: 100%;
-   height: calc(100vh - 300px); /* assuming your header is 80px tall */;
-  z-index: 1; 
-}
-
-.hero-container {
-  position: relative;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-.join-btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #FF941A;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
-.join-btn:hover {
-  background-color: #C62828;
-  color: white;
 }
 
 /* Main container styling */
@@ -211,17 +184,17 @@ main h1 {
 
 /* Member card styling */
 .member-card {
-  border: 1px solid #ccc;
+  border: 1px solid #FF941A;
   border-radius: 8px;
   background-color: #fff;
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px #876F6F;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .member-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px black;
 }
 
 /* Card images */
@@ -249,21 +222,215 @@ main h1 {
 .member-info h2 {
   margin: 0;
   font-size: 1.2rem;
-  color: #222;
+  color: black;
 }
 
 .member-info p {
   margin: 0.25rem 0;
   font-size: 0.9rem;
-  color: #555;
+  color: black;
   text-align: justify;
+}
+
+/******************************** Home Page Design **********************************/
+
+/* Hero section */
+.hero {
+  grid-row: 1;
+  grid-column: 1/5;
+  width: 100%;
+   height: calc(100vh - 100px); /* assuming your header is 80px tall */;
+  z-index: 1; 
+}
+
+.hero-container {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.join-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #FF941A;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.join-btn:hover {
+  background-color: #C62828;
+  color: #fff;
+}
+
+/*Current Events*/
+/* Styling for the Main Section and Heading */
+#upcomingEvents {
+    padding: 20px 0;
+}
+
+#upcomingEvents h2 {
+    text-align: center; 
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Container for the Cards - Flexbox for responsive layout */
+#eventCardWrapper {
+    display: flex; 
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+/* Event Card Defaults (Stacked Mobile View) */
+.event-card {
+    background-color: #fff;
+    border: 1px solid #FF941A;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #876F6F;
+    padding: 15px;
+    width: 100%; /* Full width on mobile */
+    max-width: 350px; 
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+
+.event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    color: #FF941A; /* Event color */
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.event-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.event-info {
+    font-weight: bold;
+    color: black;
+}
+
+/* Weather Forecast */
+/* --- GRID LAYOUT --- */
+.weather-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* --- CARD DESIGN --- */
+.forecast-day {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px #876F6F;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px black;
+}
+
+.highlight-border {
+    border: 2px solid #FF941A;
+}
+
+/* Improve date styling */
+.date {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #C62828;
+    margin: 0.5rem 0;
+}
+
+/* Company Spotlights */
+/* Styling for the Main Section and Heading */
+#memberSpotlight {
+    padding: 20px 0;
+}
+
+#memberSpotlight h2 {
+    text-align: center; /* Ensures the H2 is centered */
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Container for the Cards - This is where the Flexbox magic happens */
+#cardWrapper {
+    display: flex; /* 1. Enable Flexbox */
+    gap: 20px;    /* Space between cards */
+    flex-wrap: wrap; /* Allows cards to wrap (stacked view) */
+    justify-content: center; /* Center the row of cards */
+}
+
+/* Card defaults (Stacked Mobile View) */
+.member-card-spotlight {
+    background-color: #fff;
+    border: 1px solid #FF941A;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #876F6F;
+    padding: 20px;
+    width: 100%; /* 2. Full width on mobile (stacked) */
+    max-width: 350px; 
+    box-sizing: border-box; 
+}
+
+/* Optional styling for badges and images (retained for look and feel) */
+.member-card-spotlight img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #FF941A;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.membership-badge.Gold {
+    background-color: #FF941A;
+    color: black;
+}
+
+.membership-badge.Silver {
+    background-color: #adb5bd;
+    color: black;
+}
+
+.membership-badge.Bronze {
+  background-color: #A87900;
+  color: black;
 }
 
 /* Footer Styles */
 .footer {
   background-color: #876F6F;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;

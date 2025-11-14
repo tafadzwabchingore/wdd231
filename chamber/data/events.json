@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Madokero Business Expo",
+    "date": "2025-12-05",
+    "time": "10:00 AM",
+    "location": "Madokero Mall, Harare",
+    "image": "https://images.unsplash.com/photo-1565372914652-7c16a6b5b46d?crop=entropy&cs=tinysrgb&fit=max&w=600&h=400"
+  },
+  {
+    "name": "GreenView Gardening Workshop",
+    "date": "2025-11-20",
+    "time": "2:00 PM",
+    "location": "Plot 4, Madokero Business Park, Harare",
+    "image": "https://images.unsplash.com/photo-1592928308584-2e7b071aa2fa?crop=entropy&cs=tinysrgb&fit=max&w=600&h=400"
+  },
+  {
+    "name": "SmartTech IT Seminar",
+    "date": "2025-11-25",
+    "time": "9:00 AM",
+    "location": "Suite 8, Madokero Plaza, Harare",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&w=600&h=400"
+  },
+  {
+    "name": "Madokero Fitness Challenge",
+    "date": "2025-12-10",
+    "time": "7:00 AM",
+    "location": "Madokero Shopping Complex, Harare",
+    "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?crop=entropy&cs=tinysrgb&fit=max&w=600&h=400"
+  },
+  {
+    "name": "Elite Bakehouse Christmas Fair",
+    "date": "2025-12-15",
+    "time": "11:00 AM",
+    "location": "Stand 145, Madokero Crescent, Harare",
+    "image": "https://images.unsplash.com/photo-1606312619592-0a3e8e93f3e4?crop=entropy&cs=tinysrgb&fit=max&w=600&h=400"
+  }
+]
