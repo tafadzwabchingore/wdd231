@@ -10,7 +10,7 @@ function createEventCardHTML(event) {
     return `
         <div class="event-card">
             <img src="${event.image}" alt="Image for ${event.name}" loading="lazy">
-            <h3>${event.name}</h3>
+            <h2>${event.name}</h2>
             <p class="event-info">📅${formattedDate} at ${event.time}</p>
             <p><strong>📌Location:</strong> ${event.location}</p>
             <p>${event.description}</p>

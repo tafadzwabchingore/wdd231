@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 231 - Web Frontend Development 1 Chamber of Commerce Directory Page">
+    <meta name="description" content="WDD 231 - Web Frontend Development 1 Chamber of Commerce Thank You Page">
     <meta name="author" content="Tafadzwa Chingore">
     <link rel="icon" href="logo.ico" type="image/x-icon">
-    <meta property="og:title" content="Tafadzwa Chingore - WDD 231 - Web Frontend Development Chamber of Commerce Directory">
-    <meta property="og:description" content="Madokero Chamber of Commerce Directory Page for WDD 231 - Web Frontend Development 1">
+    <meta property="og:title" content="Tafadzwa Chingore - WDD 231 - Web Frontend Development Chamber of Commerce Thank You Page">
+    <meta property="og:description" content="Madokero Chamber of Commerce Thank You Page for WDD 231 - Web Frontend Development 1">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://tafadzwabchingore.github.io/wdd231/chamber/images/hero.webp">
-    <meta property="og:url" content="https://tafadzwabchingore.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://tafadzwabchingore.github.io/wdd231/chamber/thankyou.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <title>Directory | Madokero Chamber of Commerce</title>
+    <title>Thank You | Madokero Chamber of Commerce</title>
 </head>
 <body>
     <header class="header">
@@ -29,8 +29,8 @@
         <nav class="nav" id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
@@ -42,19 +42,18 @@
         </div>
     </header>
     <main>
-        <h1>Chamber Directory</h1>
 
-        <!-- Member Directory Section -->
-         <div class="view-toggle">
-            <button id="gridViewBtn">Grid View</button>
-            <button id="listViewBtn">List View</button>
+        <h1>Thank You for Joining!</h1>
+        <p style="text-align:center;">We're excited to welcome you to our business community.</p>
+
+        <div class="submitted-data">
+            <div id="data-container">
+                <p>Loading your information...</p>
+            </div>
         </div>
 
-        <section id="memberContainer" class="grid-view">
-            <h2>Members</h2>
-            
-            <!-- Member cards will be dynamically inserted here -->
-        </section>
+        <canvas id="confetti-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:9999;"></canvas>
+    
     </main>
     <footer class="footer">
         <div class="footer-column left">
@@ -75,7 +74,7 @@
         </div>
     </footer>
     <script src="scripts/header.js"></script>
-    <script src="scripts/members.js"></script>
     <script src="scripts/get-dates.js"></script>
+    <script src="scripts/thankyou.js"></script>
 </body>
 </html>

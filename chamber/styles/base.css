@@ -38,7 +38,7 @@ body.dark {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1rem;
-  background-color: #876F6F;
+  background-color: purple;
   color: #fff;
   position: sticky;
   top: 0;
@@ -76,12 +76,13 @@ body.dark {
 }
 
 .nav a:hover {
-    background-color: #C62828;
+    background-color: #fff;
+    color: black;
 }
 
 nav a.active {
-  background-color: #C62828;
-  color: #fff;
+  background-color: #fff;
+  color: black;
 }
 
 /* Icons */
@@ -135,7 +136,7 @@ main h1 {
 .view-toggle button {
   padding: 0.5rem 1.2rem;
   border: none;
-  background-color: #876F6F;
+  background-color: purple;
   color: #fff;
   font-size: 1.5rem;
   border-radius: 5px;
@@ -144,7 +145,8 @@ main h1 {
 }
 
 .view-toggle button:hover {
-  background-color: #C62828;
+  background-color: #fff;
+  color: black;
   transform: translateY(-2px);
 }
 
@@ -183,11 +185,11 @@ main h1 {
 
 /* Member card styling */
 .member-card {
-  border: 1px solid #FF941A;
+  border: 1px solid purple;
   border-radius: 8px;
   background-color: #fff;
   padding: 1rem;
-  box-shadow: 0 2px 5px #876F6F;
+  box-shadow: 0 2px 5px black;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -238,7 +240,7 @@ main h1 {
   grid-row: 1;
   grid-column: 1/5;
   width: 100%;
-   height: calc(100vh - 100px); /* assuming your header is 80px tall */;
+  height: 100%; /* assuming your header is 80px tall */;
   z-index: 1; 
 }
 
@@ -256,16 +258,18 @@ main h1 {
 .join-btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background-color: #FF941A;
-  color: black;
+  background-color: purple;
+  color: white;
   font-size: 1.5rem;
+  font-weight: bolder;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 1rem;
 }
+
 .join-btn:hover {
-  background-color: #C62828;
-  color: #fff;
+  background-color: #fff;
+  color: black;
 }
 
 /*Current Events*/
@@ -291,9 +295,9 @@ main h1 {
 /* Event Card Defaults (Stacked Mobile View) */
 .event-card {
     background-color: #fff;
-    border: 1px solid #FF941A;
+    border: 1px solid purple;
     border-radius: 8px;
-    box-shadow: 0 4px 8px #876F6F;
+    box-shadow: 0 4px 8px black;
     padding: 15px;
     width: 100%; /* Full width on mobile */
     max-width: 350px; 
@@ -309,8 +313,7 @@ main h1 {
     margin-bottom: 10px;
 }
 
-.event-card h3 {
-    color: #C62828;
+.event-card h2 {
     font-size: 1.2em;
     margin-top: 0;
 }
@@ -318,11 +321,11 @@ main h1 {
 .event-card p {
     margin: 5px 0;
     font-size: 0.9em;
+    color: black;
 }
 
 .event-info {
     font-weight: bold;
-    color: black;
 }
 
 /* Weather Forecast */
@@ -338,7 +341,7 @@ main h1 {
     background: #fff;
     padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px #876F6F;
+    box-shadow: 0 5px 15px black;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -348,14 +351,14 @@ main h1 {
 }
 
 .highlight-border {
-    border: 2px solid #FF941A;
+    border: 2px solid purple;
 }
 
 /* Improve date styling */
 .date {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #C62828;
+    color: purple;
     margin: 0.5rem 0;
 }
 
@@ -368,7 +371,6 @@ main h1 {
 #memberSpotlight h2 {
     text-align: center; /* Ensures the H2 is centered */
     margin-bottom: 20px;
-    color: black;
 }
 
 /* Container for the Cards - This is where the Flexbox magic happens */
@@ -382,9 +384,9 @@ main h1 {
 /* Card defaults (Stacked Mobile View) */
 .member-card-spotlight {
     background-color: #fff;
-    border: 1px solid #FF941A;
+    border: 1px solid purple;
     border-radius: 8px;
-    box-shadow: 0 4px 8px #876F6F;
+    box-shadow: 0 4px 8px black;
     padding: 20px;
     width: 100%; /* 2. Full width on mobile (stacked) */
     max-width: 350px; 
@@ -398,7 +400,7 @@ main h1 {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #FF941A;
+    border: 3px solid purple;
 }
 
 .membership-badge {
@@ -425,9 +427,48 @@ main h1 {
   color: black;
 }
 
+/********************************** Join Page ***********************************/
+.join-container {
+  display: grid;
+  gap: 2rem;
+}
+
+/********************************* Thank You Page *******************************/
+p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  .submitted-data {
+    text-align: left;
+    border-top: 2px solid purple;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .submitted-data h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: center;
+  }
+  .data-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed purple;
+    display: flex;
+    justify-content: space-between;
+  }
+  .data-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Style for selected membership level to make it stand out */
+  .membership-level {
+    font-weight: bold;
+    color: purple;
+  }
+    
 /* Footer Styles */
 .footer {
-  background-color: #876F6F;
+  background-color: purple;
   color: #fff;
   font-size: 1rem;
   display: grid;

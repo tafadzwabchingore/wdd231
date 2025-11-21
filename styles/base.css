@@ -453,3 +453,42 @@ footer>p {
   padding: 0;
   line-height: 1.5;
 }
+
+/**************** Modal Dialog ********************/
+/* ---- Modal Container ---- */
+#course-details {
+  border: none;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 450px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  font-family: inherit;
+}
+
+/* ---- Backdrop ---- */
+#course-details::backdrop {
+  background: rgba(0,0,0,0.5);
+}
+
+/* ---- Close Button ---- */
+#course-details button.close-btn {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 1rem;
+}
+
+#course-details button.close-btn:hover {
+  background: #b71c1c;
+}
+
+/* Optional: spacing inside modal */
+#course-details h2,
+#course-details p {
+  margin-bottom: .75rem;
+}

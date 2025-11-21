@@ -37,15 +37,15 @@ function displayResults(data) {
         dateElement.textContent = `${month}/${day}`;
 
         if (i === 0) {
-            dayElement.querySelector('h3').textContent = 'Today';
+            dayElement.querySelector('h2').textContent = 'Today';
         } else if (i === 1) {
-            dayElement.querySelector('h3').textContent = getWeekdayName(date.getDay() % 7);
+            dayElement.querySelector('h2').textContent = getWeekdayName(date.getDay() % 7);
         } else if (i === 2) { // Updated the condition to match the new iteration
-            dayElement.querySelector('h3').textContent = getDayAfterTomorrowName(date.getDay());
+            dayElement.querySelector('h2').textContent = getDayAfterTomorrowName(date.getDay());
         } else {
             // Here, you can define how you want to label the additional day, 
             // for example, you could simply use the weekday name.
-            dayElement.querySelector('h3').textContent = getWeekdayName(date.getDay() % 7);
+            dayElement.querySelector('h2').textContent = getWeekdayName(date.getDay() % 7);
         }
 
         tempElement.textContent = `${forecast.temp.day.toFixed(0)}°C`;
