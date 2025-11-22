@@ -30,7 +30,6 @@ body.dark {
   padding: 0.8rem 1rem;
   background-color: purple;
   color: #fff;
-  /*position: fixed;*/
   top: 0;
   z-index: 100;
 }
@@ -66,8 +65,8 @@ body.dark {
 }
 
 .nav a:hover {
-    background-color: #fff;
-    color: black;
+  background-color: #fff;
+  color: black;
 }
 
 nav a.active {
@@ -97,11 +96,11 @@ nav a.active {
   display: none;
 }
 
-/* Main container styling */
+/* Main container */
 main {
-  max-width: 1200px; /* Limits width on large screens */
-  margin: 0 auto; /* Center on screen */
-  padding: 2rem 1rem; /* Top-bottom and horizontal padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,11 +140,6 @@ main h1 {
 }
 
 /* Member section container */
-.grid-view h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
 #memberContainer {
   width: 100%;
   display: flex;
@@ -197,7 +191,7 @@ main h1 {
 }
 
 #memberContainer.list-view .member-card img {
-  display: none; /* hide images in list view */
+  display: none;
 }
 
 /* Member info */
@@ -223,15 +217,15 @@ main h1 {
   text-align: justify;
 }
 
-/******************************** Home Page Design **********************************/
+/******************************** Home Page **********************************/
 
 /* Hero section */
 .hero {
   grid-row: 1;
   grid-column: 1/5;
   width: 100%;
-  height: 100%; /* assuming your header is 80px tall */;
-  z-index: 1; 
+  height: 100%;
+  z-index: 1;
 }
 
 .hero-container {
@@ -245,6 +239,7 @@ main h1 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .join-btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -262,154 +257,144 @@ main h1 {
   color: black;
 }
 
-/*Current Events*/
-/* Styling for the Main Section and Heading */
+/* Current Events */
 #upcomingEvents {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 #upcomingEvents h2 {
-    text-align: center; 
-    margin-bottom: 20px;
-    color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
 }
 
-/* Container for the Cards - Flexbox for responsive layout */
 #eventCardWrapper {
-    display: flex; 
-    gap: 20px;
-    flex-wrap: wrap; 
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Event Card Defaults (Stacked Mobile View) */
 .event-card {
-    background-color: #fff;
-    border: 1px solid purple;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px black;
-    padding: 15px;
-    width: 100%; /* Full width on mobile */
-    max-width: 350px; 
-    box-sizing: border-box; 
-    overflow: hidden;
+  background-color: #fff;
+  border: 1px solid purple;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px black;
+  padding: 15px;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .event-card img {
-    width: 104px;
-    height: 102px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
+  width: 104px;
+  height: 102px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .event-card h2 {
-    font-size: 1.2em;
-    margin-top: 0;
+  font-size: 1.2em;
+  margin-top: 0;
 }
 
 .event-card p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: black;
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: black;
 }
 
 .event-info {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Weather Forecast */
-/* --- GRID LAYOUT --- */
 .weather-grid {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-/* --- CARD DESIGN --- */
 .forecast-day {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px black;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .forecast-day:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px black;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px black;
 }
 
 .highlight-border {
-    border: 2px solid purple;
+  border: 2px solid purple;
 }
 
-/* Improve date styling */
 .date {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: purple;
-    margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: purple;
+  margin: 0.5rem 0;
 }
 
-/* Company Spotlights */
-/* Styling for the Main Section and Heading */
+/* Member Spotlights */
 #memberSpotlight {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 #memberSpotlight h2 {
-    text-align: center; /* Ensures the H2 is centered */
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Container for the Cards - This is where the Flexbox magic happens */
 #cardWrapper {
-    display: flex; /* 1. Enable Flexbox */
-    gap: 20px;    /* Space between cards */
-    flex-wrap: wrap; /* Allows cards to wrap (stacked view) */
-    justify-content: center; /* Center the row of cards */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Card defaults (Stacked Mobile View) */
 .member-card-spotlight {
-    background-color: #fff;
-    border: 1px solid purple;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px black;
-    padding: 20px;
-    width: 100%; /* 2. Full width on mobile (stacked) */
-    max-width: 350px; 
-    box-sizing: border-box; 
+  background-color: #fff;
+  border: 1px solid purple;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px black;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
 }
 
-/* Optional styling for badges and images (retained for look and feel) */
 .member-card-spotlight img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid purple;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid purple;
 }
 
 .membership-badge {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-weight: bold;
-    font-size: 0.8em;
-    margin-top: 10px;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: 10px;
 }
 
 .membership-badge.Gold {
-    background-color: #FF941A;
-    color: black;
+  background-color: #FF941A;
+  color: black;
 }
 
 .membership-badge.Silver {
-    background-color: #adb5bd;
-    color: black;
+  background-color: #adb5bd;
+  color: black;
 }
 
 .membership-badge.Bronze {
@@ -417,7 +402,7 @@ main h1 {
   color: black;
 }
 
-/********************************** Join Page ***********************************/
+/******************************** Join Page ***********************************/
 .join-container {
   display: grid;
   gap: 2rem;
@@ -431,7 +416,6 @@ main h1 {
   text-decoration: underline;
 }
 
-/* Modals */
 .benefit-modal {
   padding: 2rem;
   border: none;
@@ -452,40 +436,43 @@ main h1 {
   cursor: pointer;
 }
 
-/********************************* Thank You Page *******************************/
+/******************************** Thank You Page *******************************/
 p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-  }
-  .submitted-data {
-    text-align: left;
-    border-top: 2px solid purple;
-    padding-top: 20px;
-    margin-top: 20px;
-  }
-  .submitted-data h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.4em;
-    text-align: center;
-  }
-  .data-item {
-    padding: 10px 0;
-    border-bottom: 1px dashed purple;
-    display: flex;
-    justify-content: space-between;
-  }
-  .data-item:last-child {
-    border-bottom: none;
-  }
-  
-  /* Style for selected membership level to make it stand out */
-  .membership-level {
-    font-weight: bold;
-    color: purple;
-  }
-    
-/* Footer Styles */
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.submitted-data {
+  text-align: left;
+  border-top: 2px solid purple;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.submitted-data h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.data-item {
+  padding: 10px 0;
+  border-bottom: 1px dashed purple;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-item:last-child {
+  border-bottom: none;
+}
+
+.membership-level {
+  font-weight: bold;
+  color: purple;
+}
+
+/******************************** Footer ***************************************/
 .footer {
   background-color: purple;
   color: #fff;

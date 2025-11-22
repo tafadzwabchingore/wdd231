@@ -27,9 +27,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Non-blocking CSS (Preloaded → then async applied) -->
-    <link rel="preload" href="styles/normalize.css" as="style">
-    <link rel="preload" href="styles/base.css" as="style">
-    <link rel="preload" href="styles/larger.css" as="style">
+    <link rel="stylesheet" rel="preload" href="styles/normalize.css" as="style">
+    <link rel="stylesheet" rel="preload" href="styles/base.css" as="style">
+    <link rel="stylesheet" rel="preload" href="styles/larger.css" as="style">
 
     <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles/base.css" media="print" onload="this.media='all'">
@@ -88,7 +88,7 @@
                     <h2 id="today">Day</h2>
                     <h2 class="date">Date</h2>
                     <p class="forecast-temp">Temp</p>
-                    <img class="forecast-icon" src="./images/" alt="weather-icon" loading="lazy">
+                    <img class="forecast-icon" alt="weather-icon" loading="lazy">
                     <p class="forecast-description">words</p>
                 </div>
 
@@ -97,7 +97,7 @@
                     <h2 id="tomorrow">day</h2>
                     <h2 class="date">date</h2>
                     <p class="forecast-temp">temp</p>
-                    <img class="forecast-icon" src="./images/" alt="weather-icon" loading="lazy">
+                    <img class="forecast-icon"  alt="weather-icon" loading="lazy">
                     <p class="forecast-description">word</p>
                 </div>
 
@@ -106,7 +106,7 @@
                     <h2 id="dayAfterTomorrow">day</h2>
                     <h2 class="date">date</h2>
                     <p class="forecast-temp">temp</p>
-                    <img class="forecast-icon" src="./images/" alt="weather-icon" loading="lazy">
+                    <img class="forecast-icon"  alt="weather-icon" loading="lazy">
                     <p class="forecast-description">words</p>
                 </div>
 
@@ -115,7 +115,7 @@
                     <h2 id="dayAfterAfterTomorrow">day</h2>
                     <h2 class="date">date</h2>
                     <p class="forecast-temp">temp</p>
-                    <img class="forecast-icon" src="./images/" alt="weather-icon" loading="lazy">
+                    <img class="forecast-icon"  alt="weather-icon" loading="lazy">
                     <p class="forecast-description">words</p>
                 </div>
 
@@ -149,10 +149,10 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-    <script src="scripts/header.js"></script>
-    <script src="scripts/get-dates.js"></script>
-    <script src="scripts/get-weather.js"></script>
-    <script src="scripts/spotlight-members.js"></script>
-    <script src="scripts/events.js"></script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/get-dates.js" defer></script>
+    <script src="scripts/get-weather.js" defer></script>
+    <script src="scripts/spotlight-members.js" defer></script>
+    <script src="scripts/events.js" defer></script>
 </body>
 </html>
