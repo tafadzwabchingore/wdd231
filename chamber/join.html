@@ -13,11 +13,31 @@
     <meta property="og:url" content="https://tafadzwabchingore.github.io/wdd231/chamber/join.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    </noscript>
+
+    <link rel="preload" href="styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    </noscript>
+
+    <!-- Optional: preload key font files -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc-.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/rocksalt/v12/KFOmCnqEu92Fr1Mu4mxM.woff2" as="font" type="font/woff2" crossorigin>
+
+
     <title>Join | Madokero Chamber of Commerce</title>
 </head>
 <body>
@@ -213,8 +233,6 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-    <script src="scripts/header.js" defer></script>
-    <script src="scripts/get-dates.js" defer></script>
     <script src="scripts/join.js" defer></script>
 </body>
 </html>

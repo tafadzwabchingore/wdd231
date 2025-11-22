@@ -6,24 +6,41 @@
     <meta name="description" content="WDD 231 - Web Frontend Development 1 Chamber of Commerce Home Page">
     <meta name="author" content="Tafadzwa Chingore">
     <link rel="icon" href="logo.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Tafadzwa Chingore - WDD 231 - Web Frontend Development Chamber of Commerce Home Page">
     <meta property="og:description" content="Madokero Chamber of Commerce Home Page for WDD 231 - Web Frontend Development 1">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://tafadzwabchingore.github.io/wdd231/chamber/images/hero.webp">
     <meta property="og:url" content="https://tafadzwabchingore.github.io/wdd231/chamber/index.html">
+
+    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Preload the actual font files (woff2) to reduce CLS -->
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/rocksalt/v24/FeVQS0BTqb0h60ACL5su.woff2" type="font/woff2" crossorigin>
+
+    <!-- Load Google Fonts non-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Non-blocking CSS (Preloaded → then async applied) -->
+    <link rel="preload" href="styles/normalize.css" as="style">
+    <link rel="preload" href="styles/base.css" as="style">
+    <link rel="preload" href="styles/larger.css" as="style">
+
+    <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/larger.css" media="print" onload="this.media='all'">
+
     <title>Home | Madokero Chamber of Commerce Page</title>
 </head>
 <body>
     <header class="header">
         <div class="logo-container">
-            <img src="images/logo.svg" alt="Site Logo" class="logo">
+            <img src="images/logo.svg" alt="Site Logo" class="logo" width="1" height="2">
             <span class="site-title">Madokero Chamber of Commerce</span>
         </div>
 
@@ -44,7 +61,7 @@
         </div>
     </header>
     <div>
-        <img class="hero" src="images/hero.webp" alt="Hero Image" loading="lazy">
+        <img class="hero" src="images/hero_1130x633.webp" alt="Hero Image" width="1130" height="633" fetchpriority="high">
         <div class="hero-overlay">
             <a href="join.html" class="join-btn">Join Now</a>
         </div>

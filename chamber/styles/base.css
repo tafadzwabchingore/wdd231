@@ -7,9 +7,13 @@
 
 /* Body styling */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   transition: background-color 0.3s, color 0.3s;
   background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 body.dark {
@@ -26,7 +30,7 @@ body.dark {
   padding: 0.8rem 1rem;
   background-color: purple;
   color: #fff;
-  position: sticky;
+  /*position: fixed;*/
   top: 0;
   z-index: 100;
 }
@@ -292,8 +296,8 @@ main h1 {
 }
 
 .event-card img {
-    width: 100%;
-    height: 150px;
+    width: 104px;
+    height: 102px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
