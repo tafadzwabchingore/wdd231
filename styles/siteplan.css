@@ -56,11 +56,6 @@ ul li {
     padding: 10px 15px;
 }
 
-/* Optional: Stripe the list items for better readability */
-ul li:nth-child(even) {
-    background-color: rgba(240, 98, 20, 0.05); /* Slight tint of accent color 2 */
-}
-
 
 /* Wireframe Image Layout: Side-by-Side on Desktop */
 .wireframes-container {
@@ -86,7 +81,7 @@ picture {
     overflow: hidden;
     padding: 10px;
     background-color: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px black;
 }
 
 picture img {
