@@ -32,9 +32,7 @@
 
     <script src="scripts/header.js" defer></script>
     <script src="scripts/get-dates.js" defer></script>
-    <script src="scripts/get-weather.js" defer></script>
-    <script src="scripts/spotlight-members.js" defer></script>
-    <script src="scripts/events.js" defer></script>
+    <script type="module" src="scripts/discover.js" defer></script>
 
     <title>Home | Madokero Chamber of Commerce Page</title>
 </head>
@@ -47,10 +45,10 @@
 
         <nav class="nav" id="nav-menu">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
 
@@ -61,77 +59,26 @@
             </button>
         </div>
     </header>
-    <div>
-        <img class="hero" src="images/hero_1130x633.webp" alt="Hero Image" width="1130" height="633" fetchpriority="high">
-        <div class="hero-overlay">
-            <a href="join.html" class="join-btn">Become a Member</a>
-        </div>
-    </div>
     <main>
-        <h1>Chamber Home</h1>
-        <!--Current Events-->
-        <section id="upcomingEvents">
-            <h2>Upcoming Chamber Events</h2>
-            <div id="eventCardWrapper"></div>
-        </section>
-        <!--Weather Forecast-->
-        <section>
-            <div class="weather-grid">
-
-                <!-- Heading 1 -->
-                <h2 class="heading today-heading">Weather Forecast</h2>
-
-                <!-- Heading 2 -->
-                <h2 class="heading upcoming-heading">3-Day Weather Forecast</h2>
-
-                <!-- TODAY -->
-                <div class="forecast-day highlight-border">
-                    <h2 id="today">Day</h2>
-                    <h2 class="date">Date</h2>
-                    <p class="forecast-temp">Temp</p>
-                    <img class="forecast-icon" src="#" alt="weather-icon" loading="lazy">
-                    <p class="forecast-description">words</p>
-                </div>
-
-                <!-- DAY 2 -->
-                <div class="forecast-day">
-                    <h2 id="tomorrow">day</h2>
-                    <h2 class="date">date</h2>
-                    <p class="forecast-temp">temp</p>
-                    <img class="forecast-icon" src="#" alt="weather-icon" loading="lazy">
-                    <p class="forecast-description">word</p>
-                </div>
-
-                <!-- DAY 3 -->
-                <div class="forecast-day">
-                    <h2 id="dayAfterTomorrow">day</h2>
-                    <h2 class="date">date</h2>
-                    <p class="forecast-temp">temp</p>
-                    <img class="forecast-icon" src="#" alt="weather-icon" loading="lazy">
-                    <p class="forecast-description">words</p>
-                </div>
-
-                <!-- DAY 4 -->
-                <div class="forecast-day">
-                    <h2 id="dayAfterAfterTomorrow">day</h2>
-                    <h2 class="date">date</h2>
-                    <p class="forecast-temp">temp</p>
-                    <img class="forecast-icon" src="#" alt="weather-icon" loading="lazy">
-                    <p class="forecast-description">words</p>
-                </div>
-
+        <div class="visit-message"></div>
+        <div class="discover-hero-banner">
+            <div class="hero-content">
+                <h1>Discover Madokero</h1>
+                <p>Explore local attractions, markets, parks, and business resources in our community.</p>
+                <a class="learn-more" href="join.html">Become a Member</a>
             </div>
+        </div>
 
-            <div class="underline"></div>
-        </section>
+        <div class="discover-intro">
+            <h2>About Madokero</h2>
+            <p>Madokero is a welcoming community with a growing small business scene, beautiful outdoor spaces and a vibrant cultural calendar. The chamber supports local businesses with promotional campaigns, events and training.</p>
+        </div>
 
-        <section id="memberSpotlight" class="grid-view">
-            <h2>Members Spotlight</h2>
-            <div id="cardWrapper"></div>
-        </section>
-
-                
+        <div class="discover-grid">
+            <!-- JS will dynamically insert cards here -->
+        </div>
     </main>
+      
     <footer class="footer">
         <div class="footer-column left">
             <h2>Madokero Chamber of Commerce</h2>
