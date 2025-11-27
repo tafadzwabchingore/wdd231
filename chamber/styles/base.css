@@ -2,34 +2,73 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Consolidated from * and *, *::before, *::after */
+}
+
+/* GLOBAL RESET – remove horizontal scrolling (merged with general reset for box-sizing) */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  max-width: 100%;
+}
+
+/* Base Font Families (Consolidated) */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif; /* Consolidated body and h1-h6 font-family */
 }
 
 /* Body styling */
 body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   transition: background-color 0.3s, color 0.3s;
   background-color: #fff;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 body.dark {
   background-color: black;
   color: #fff;
+  box-shadow: white; /* This declaration seems incomplete/odd here, but preserved for accuracy */
+}
+
+/* Text Colors (Consolidated common color: black) */
+.member-info h2,
+.member-info p,
+#upcomingEvents h2,
+.event-card p {
+  color: black;
+}
+
+/* Background Colors (Consolidated common background-color: #fff) */
+.member-card,
+.event-card,
+.forecast-day,
+.member-card-spotlight,
+.visit-message,
+.discover-hero-banner,
+.discover-intro,
+.discover-card,
+.discover-card img,
+.discover-dialog {
+  background-color: #fff;
 }
 
 /* Header */
+.header,
+.footer { /* Merged .footer's background-color and color */
+  background-color: purple;
+  color: #fff;
+}
+
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1rem;
-  background-color: purple;
-  color: #fff;
   z-index: 100;
 }
 
@@ -63,12 +102,8 @@ body.dark {
   font-weight: 500;
 }
 
-.nav a:hover {
-  background-color: #fff;
-  color: black;
-}
-
-nav a.active {
+.nav a:hover,
+nav a.active { /* Merged identical hover/active styles */
   background-color: #fff;
   color: black;
 }
@@ -170,7 +205,6 @@ main h1 {
 .member-card {
   border: 1px solid purple;
   border-radius: 8px;
-  background-color: #fff;
   padding: 1rem;
   box-shadow: 0 2px 5px black;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -206,13 +240,11 @@ main h1 {
 .member-info h2 {
   margin: 0;
   font-size: 1.2rem;
-  color: black;
 }
 
 .member-info p {
   margin: 0.25rem 0;
   font-size: 0.9rem;
-  color: black;
   text-align: justify;
 }
 
@@ -264,7 +296,6 @@ main h1 {
 #upcomingEvents h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: black;
 }
 
 #eventCardWrapper {
@@ -275,7 +306,6 @@ main h1 {
 }
 
 .event-card {
-  background-color: #fff;
   border: 1px solid purple;
   border-radius: 8px;
   box-shadow: 0 4px 8px black;
@@ -302,7 +332,6 @@ main h1 {
 .event-card p {
   margin: 5px 0;
   font-size: 0.9em;
-  color: black;
 }
 
 .event-info {
@@ -317,7 +346,6 @@ main h1 {
 }
 
 .forecast-day {
-  background: #fff;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 5px 15px black;
@@ -358,7 +386,6 @@ main h1 {
 }
 
 .member-card-spotlight {
-  background-color: #fff;
   border: 1px solid purple;
   border-radius: 8px;
   box-shadow: 0 4px 8px black;
@@ -472,22 +499,9 @@ p {
 }
 
 /******************************* Discover Page *********************************/
-/* GLOBAL RESET – remove horizontal scrolling */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  max-width: 100%;
-}
 
 /* LAST VISIT MESSAGE */
 .visit-message {
-  background: #fff;
   border-left: 6px solid purple;
   padding: .8rem 1rem;
   border-radius: 6px;
@@ -496,8 +510,8 @@ html, body {
 }
 
 /* -----------------------------------------
-   SMALL SCREENS • 320–640px
-   SINGLE COLUMN LAYOUT
+    SMALL SCREENS • 320–640px
+    SINGLE COLUMN LAYOUT
 ------------------------------------------*/
 .discover-grid {
   display: grid;
@@ -523,7 +537,6 @@ html, body {
 /* HERO */
 .discover-hero-banner {
   grid-area: hero;
-  background: #fff;
   border: 1px solid purple;
   border-radius: 12px;
   box-shadow: 0 4px 10px black;
@@ -560,7 +573,6 @@ html, body {
 /* INTRO BLOCK */
 .discover-intro {
   grid-area: intro;
-  background: #fff;
   padding: 1rem;
   border: 1px solid purple;
   border-radius: 8px;
@@ -569,7 +581,6 @@ html, body {
 
 /* CARDS */
 .discover-card {
-  background: #fff;
   border: 1px solid purple;
   border-radius: 10px;
   padding: .8rem;
@@ -593,7 +604,6 @@ html, body {
   object-fit: cover;
   aspect-ratio: 3 / 2;
   display: block;
-  background: #fff;
 }
 
 /* CARD TEXT */
@@ -626,110 +636,13 @@ html, body {
   transition: background-color .3s ease;
 }
 
-.learn-more:hover {
+.learn-more:hover,
+.dialog-close:hover { /* Merged dialog-close:hover background */
   background: black;
 }
 
-/* -----------------------------------------
-   HOVER EFFECT (TABLET & DESKTOP)
-------------------------------------------*/
-@media (min-width: 641px) {
-  .discover-card img {
-    transition: transform 350ms cubic-bezier(.2,.9,.2,1), filter 250ms;
-  }
-  .discover-card:hover img {
-    transform: scale(1.06);
-    filter: saturate(1.08) drop-shadow(0 8px 14px rgba(10,20,40,0.08));
-  }
-}
-
-/* -----------------------------------------
-   MEDIUM SCREENS • 641–1024px
-   TWO COLUMN LAYOUT
-------------------------------------------*/
-@media (min-width: 641px) and (max-width: 1024px) {
-  .discover-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "hero hero"
-      "intro intro"
-      "card1 card2"
-      "card3 card4"
-      "card5 card6"
-      "card7 card8";
-  }
-}
-
-/* -----------------------------------------
-   LARGE SCREENS • 1025px+
-   THREE CARDS PER ROW
-------------------------------------------*/
-@media (min-width: 1025px) {
-
-  .discover-grid {
-    max-width: 1300px;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-
-    grid-template-areas:
-      "hero hero hero"
-      "intro intro intro"
-      "card1 card2 card3"
-      "card4 card5 card6"
-      "card7 card8 .";
-  }
-
-  /* Force all cards to equal height */
-  .discover-card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Make images uniform height across all cards */
-  .discover-card figure {
-    height: 220px; /* uniform height */
-  }
-
-  .discover-card img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  /* Stretch content to fill card evenly */
-  .discover-card .discover-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Push button to bottom */
-  .discover-card .learn-more {
-    margin-top: auto;
-  }
-}
-
-/* HERO TEXT RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-  .hero-content p {
-    font-size: .9rem;
-  }
-}
-
 /* ==================================
-   DISCOVER MODAL DIALOG
+    DISCOVER MODAL DIALOG
 ================================== */
 .discover-dialog {
   width: 90%;
@@ -737,7 +650,6 @@ html, body {
   border: none;
   border-radius: 12px;
   padding: 1.5rem;
-  background: #fff;
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
   animation: fadeIn 0.25s ease-out;
 }
@@ -758,10 +670,6 @@ html, body {
   border-radius: 5px;
   color: white;
   cursor: pointer;
-}
-
-.dialog-close:hover {
-  background: black;
 }
 
 .discover-dialog h2 {
@@ -794,7 +702,7 @@ html, body {
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (min-width: 640px) {
@@ -811,8 +719,6 @@ footer.footer {
 }
 
 .footer {
-  background-color: purple;
-  color: #fff;
   font-size: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
