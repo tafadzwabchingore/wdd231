@@ -31,7 +31,6 @@ body {
 body.dark {
   background-color: black;
   color: #fff;
-  box-shadow: white; /* This declaration seems incomplete/odd here, but preserved for accuracy */
 }
 
 /* Text Colors (Consolidated common color: black) */
