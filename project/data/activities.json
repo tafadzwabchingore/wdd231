@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Family Time Capsule",
+        "description": "Gather meaningful items, letters to future selves, and photos. Seal them in a box to open next year!",
+        "type": "Creative / Memory",
+        "cost": "Free (using household items)",
+        "duration_min": 60
+    },
+    {
+        "id": 2,
+        "title": "The 10-Minute Dance Party",
+        "description": "Put on everyone's favorite song, clear the living room floor, and have a spontaneous, energetic dance battle.",
+        "type": "Physical / Fun",
+        "cost": "Free",
+        "duration_min": 10
+    },
+    {
+        "id": 3,
+        "title": "Family Skill Swap Session",
+        "description": "Everyone teaches one small skill (e.g., a simple origami fold, a magic trick, how to tie a knot) to the rest of the family.",
+        "type": "Skill Building",
+        "cost": "Free",
+        "duration_min": 45
+    },
+    {
+        "id": 4,
+        "title": "Neighborhood Scavenger Hunt",
+        "description": "Create a list of common items (e.g., a red door, a black cat, a flower, a street sign) and take a walk to find them.",
+        "type": "Exploration",
+        "cost": "Free",
+        "duration_min": 50
+    },
+    {
+        "id": 5,
+        "title": "Cook-Off: Pantry Edition",
+        "description": "Each family member finds one item in the pantry/fridge. Together, try to invent a meal using only those items.",
+        "type": "Creative / Cooking",
+        "cost": "Free (using food you already have)",
+        "duration_min": 90
+    },
+    {
+        "id": 6,
+        "title": "Family Story Circle",
+        "description": "Start a story with one sentence. The next person adds a sentence, continuing around the circle until the story is finished.",
+        "type": "Communication",
+        "cost": "Free",
+        "duration_min": 30
+    },
+    {
+        "id": 7,
+        "title": "Pillow Fort / Indoor Camping",
+        "description": "Use blankets, pillows, and chairs to build a huge fort. Bring flashlights and read a book inside.",
+        "type": "Creative / Fun",
+        "cost": "Free",
+        "duration_min": 60
+    },
+    {
+        "id": 8,
+        "title": "Board Game or Card Game Marathon",
+        "description": "Choose a few favorite board games or card games and play them back-to-back. Losers make the popcorn!",
+        "type": "Social / Fun",
+        "cost": "Free (using existing games)",
+        "duration_min": 90
+    },
+    {
+        "id": 9,
+        "title": "Gratitude Jar Update",
+        "description": "Decorate a jar. Each family member writes one thing they are grateful for today and puts it in the jar.",
+        "type": "Reflection",
+        "cost": "Free (using scrap paper)",
+        "duration_min": 20
+    },
+    {
+        "id": 10,
+        "title": "DIY Puppet Show",
+        "description": "Use old socks, paper bags, or gloves to create puppets, then write a short play to perform for each other.",
+        "type": "Art / Performance",
+        "cost": "Free (using craft supplies)",
+        "duration_min": 75
+    },
+    {
+        "id": 11,
+        "title": "Family Vision Board",
+        "description": "Cut pictures from old magazines (or draw) and paste them onto a poster board representing family goals and dreams.",
+        "type": "Goal Setting / Art",
+        "cost": "Free (using old magazines)",
+        "duration_min": 60
+    },
+    {
+        "id": 12,
+        "title": "Star Gazing or Cloud Watching",
+        "description": "Lay outside at night and look for constellations, or during the day, look for shapes in the clouds. Discuss what you see!",
+        "type": "Nature / Observation",
+        "cost": "Free",
+        "duration_min": 40
+    },
+    {
+        "id": 13,
+        "title": "Indoor/Outdoor Obstacle Course",
+        "description": "Use pillows, ropes, chairs, and blankets to design a fun obstacle course everyone has to complete.",
+        "type": "Physical / Fun",
+        "cost": "Free",
+        "duration_min": 60
+    },
+    {
+        "id": 14,
+        "title": "Write Letters to Grandparents",
+        "description": "Write and draw cards or letters to family members who live far away to stay connected.",
+        "type": "Communication / Connection",
+        "cost": "Free (using paper/pen)",
+        "duration_min": 30
+    },
+    {
+        "id": 15,
+        "title": "Memory Lane Photo Session",
+        "description": "Open old photo albums on a device or in print. Share the stories behind the pictures and talk about how everyone has grown.",
+        "type": "Memory / Nostalgia",
+        "cost": "Free",
+        "duration_min": 45
+    }
+]

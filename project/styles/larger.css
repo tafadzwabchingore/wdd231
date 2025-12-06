@@ -1,0 +1,161 @@
+/*--------------------------------------
+  Responsive Navigation & Footer
+----------------------------------------*/
+@media (max-width: 768px) {
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;            /* ← prevents overflow */
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    background: #c6d812;
+    padding: 1rem 0;
+  }
+
+  .nav.active {
+    display: flex;          /* better than block */
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;            /* ← prevent overflow */
+    padding: 0;
+    margin: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+
+/* --- RESPONSIVENESS: Adjusts button size for different screens --- */
+
+/* For smaller screens (e.g., mobile phones, up to 600px) */
+@media (max-width: 600px) {
+    .join-btn {
+        /* Smaller font size */
+        font-size: 1rem;
+        /* Smaller padding */
+        padding: 10px 20px; 
+    }
+
+    .hero-overlay {
+        /* Optionally, you might want to adjust the overlay background or position for very small screens */
+        background-color: rgba(0, 0, 0, 0.4); /* Make overlay darker */
+    }
+}
+
+/* For medium screens (e.g., tablets, between 601px and 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .join-btn {
+        /* Medium font size */
+        font-size: 1.1rem;
+        /* Medium padding */
+        padding: 12px 25px;
+    }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  #activity-banner {
+    padding: 1.5rem;
+  }
+ 
+}
+
+/* Media query for tablets and larger screens (md: breakpoint) */
+@media (min-width: 768px) {
+    #events-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  h1 + div {
+    flex-direction: column;
+  }
+
+  aside {
+    position: static;
+    width: 100%;          /* ← full width on mobile */
+    margin: 20px 0;
+    float: none;
+  }
+}
+
+/* Small: 1 column */
+@media (max-width: 599px) {
+    #all-programs-grid {
+      grid-template-columns: 1fr;
+        grid-template-areas:
+          "card1"
+          "card2"
+          "card3"
+          "card4"
+          "card5"
+          "card6"
+          "card7"
+          "card8"
+          "card9"
+          "card10"
+          "card11"
+          "card12"
+          "card13"
+          "card14"
+          "card15";
+    }
+}
+
+/* Medium: 2 columns */
+@media (min-width: 600px) and (max-width: 1023px) {
+    #all-programs-grid {
+      grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "card1 card2"
+          "card3 card4"
+          "card5 card6"
+          "card7 card8"
+          "card9 card10"
+          "card11 card12"
+          "card13 card14"
+          "card15 .";
+    }
+}
+
+/* Large: 3 columns */
+@media (min-width: 1024px) {
+  #all-programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 card9"
+        "card10 card11 card12"
+        "card13 card14 card15";
+    }
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development 1 Youth and Family Hub Home Page">
+    <meta name="author" content="Tafadzwa Chingore">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tafadzwa Chingore - WDD 231 - Web Frontend Development Youth and Family Hub Home Page">
+    <meta property="og:description" content="Youth and Family Hub Home Page for WDD 231 - Web Frontend Development 1">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tafadzwabchingore.github.io/wdd231/project/images/hero.webp">
+    <meta property="og:url" content="https://tafadzwabchingore.github.io/wdd231/project/home.html">
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload the actual font files (woff2) to reduce CLS -->
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/rocksalt/v24/FeVQS0BTqb0h60ACL5su.woff2" type="font/woff2" crossorigin>
+
+    <!-- Load Google Fonts non-blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/larger.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="activity-banner.css">
+
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/get-dates.js" defer></script>
+    <script src="scripts/activity-banner.js" defer></script>
+    <script src="scripts/events.js" defer></script>
+    <script src="scripts/welcome.js" defer></script>
+
+    <title>Home | Youth and Family Hub</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/youthandfamilyhub-small.webp" alt="Site Logo" class="logo" width="2" height="1" fetchpriority="high">
+            <span class="site-title">Youth and Family Hub</span>
+        </div>
+
+        <nav class="nav" id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-icons">
+            <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                ☰
+            </button>
+        </div>
+    </header>
+    <!--Add local storage message as an overlay to the hero, welcome!!! Scroll down to explore our page, Yay We are Excited you are back so soon!!!, Hey there, It's been a while since your last visit on -->
+    <div class="hero-container">
+        <img class="hero" src="images/youthandfamilyhub.webp" alt="Hero Image" width="1080" height="582" fetchpriority="high">
+        <div class="hero-overlay">
+            <a class="contact-btn" href="contact.html">Need Some Advice, Click Here</a>
+        </div>
+        <div class="hero">
+            <div id="welcomeOverlay" class="welcome-overlay"></div>
+        </div>
+    </div>
+    <main>
+        <h1>Welcome!!!</h1>
+        <div class="banner-container">
+            <div id="activity-banner">
+                <h2 id="activity-title">Loading...</h2>
+                <p id="activity-description"></p>
+                <p id="activity-type-cost"></p>
+                <p id="activity-duration"></p>
+            </div>
+        </div>
+        <p>Welcome to the Youth and Family Hub, a vibrant community dedicated to empowering youth and supporting families. Our mission is to provide resources, opportunities, and a supportive environment where families can thrive and grow together.</p>
+        <div class="container">
+            <h2 class="header-title">Our Programs</h2>
+
+            <!-- Event Container -->
+            <div id="events-container">
+                <!-- Cards will be injected here -->
+            </div>
+
+            <p id="update-status" class="status-text">Programs are updating every 30 minutes.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-column left">
+            <h2>Youth and Family Hub</h2>
+            <p>13800, Madokero Estates,<br>Tynwald North,<br>Harare, Zimbabwe<br>📞 +263 71 355-5380<br>✉️ tafadzwabchingore@gmail.com</p>
+        </div>
+
+        <div class="footer-column middle">
+            <!-- SOCIAL MEDIA ICONS -->
+            <a href="https://www.instagram.com/youthandfamilyhub/" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram" width="16" height="16"></a> <!--_blank opens link in new tab-->
+            <a href="https://github.com/tafadzwabchingore" target="_blank" aria-label="GitHub"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a> 
+            <a href="https://www.linkedin.com/in/tafadzwa-chingore-b42622242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8jmWj2mhTy%2B5lpzS4GTwZg%3D%3D" target="_blank" aria-label="Linkedin"><img src="images/linkedin.svg" alt="Linkedin" width="16" height="16"></a>
+        </div>
+
+        <div class="footer-column right">
+            <p>&copy; <span id="year"></span> Tafadzwa Chingore | Youth and Family Hub</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

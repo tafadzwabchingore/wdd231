@@ -1,0 +1,672 @@
+/********************** Home & Global **************************/
+/* Prevent horizontal scrolling globally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Every image stays inside its container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix accidental overflows from flex/grid children */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif, Arial, Helvetica;
+    width: 100%;
+}
+
+
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+header, footer {
+    background-color: #c6d812;
+    font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 100px;
+  height: 54px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a:hover, .nav a.active {
+    background-color: #fff;
+    animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 5px #fff;
+    }
+    to {
+        box-shadow: 0 0 20px #fff;
+    }
+}
+
+/* Icons */
+#theme-toggle {
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.hero-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero img,
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔹 Overlay message box (top notification) */
+.welcome-overlay {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+
+  font-size: 1.2rem;
+  color: white;
+
+  display: none; /* Hidden until JS shows it */
+  z-index: 20; /* Ensures it appears ABOVE the hero overlay */
+  
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade-in animation (fixed transform conflict) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* 🔹 Full hero overlay (background darkener + center items) */
+.hero-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10; /* BELOW welcome text, ABOVE hero image */
+}
+
+.contact-btn {
+    /* Removes the default anchor link underline */
+    text-decoration: none;
+    /* Font style and size */
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Spacing around the text */
+    padding: 15px 30px;
+    /* Button color */
+    background-color: #c6d812; /* A prominent blue color */
+    color: #000;
+    /* Rounded corners */
+    border-radius: 8px;
+    /* Adds a subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Ensure the button is visible and above the overlay background */
+    z-index: 10;
+}
+
+.contact-btn:hover {
+    /* Darkens the background on hover */ 
+    /* Slightly scales the button for a visual effect */
+    transform: translateY(-2px);
+}
+
+/* Banner container */
+.banner-container {
+  width: 100%;              /* your theme color */
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;             /* center text */
+}
+
+/* Inner banner box */
+#activity-banner {
+  background: #fff;                 /* white box */
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #f06214;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+h1, h2, h3 {
+    font-family: "Roboto", sans-serif, Arial;
+}
+
+main {
+    text-align: center;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive Grid Layout */
+#events-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stacked (1 column) on mobile */
+    gap: 1.5rem; /* 6 (24px) */
+}
+
+/* Card Styling */
+.event-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem; /* xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid #f06214;
+}
+
+.event-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-2xl */
+    transform: translateY(-2px);
+}
+
+/* Fade transition class for content swap */
+.opacity-0 {
+    opacity: 0;
+}
+
+.event-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.event-card .description {
+    color: var(--color-text-medium);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.info-section {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-medium);
+    margin-top: 0.5rem;
+}
+
+.info-item strong {
+    font-weight: 600; /* semibold */
+    margin-right: 0.25rem;
+}
+
+.info-item svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.topic-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Topic Pills Styling */
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.topic-list li {
+    background-color: #c6d812; /* Indigo-100 equivalent */
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px; /* full rounded */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.status-text {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+/**************************** Discover Page ****************************/
+
+h1 + div {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin: 30px auto;
+  align-items: stretch;
+  flex-wrap: wrap;        /* ← allows wrapping */
+}
+
+div img.about {
+  max-width: 100%;        /* ← prevents overflow */
+  height: auto;
+  object-fit: cover;
+}
+
+/* About section takes up most of the row */
+.about-us {
+    flex: 3;
+    background: #f5f7fa;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f06214;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ====== ASIDE STICKY OVERLAY ====== */
+aside {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    float: right;
+    width: 260px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #f06214;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Buttons */
+aside a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #c6d812;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #f06214;
+    font-family: "Rock Salt", cursive;
+}
+aside a:hover {
+    background: #fff;
+}
+
+
+/* Grid layout for program cards */
+
+/* Base grid container */
+#all-programs-grid {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    width: 100%;
+  overflow-x: hidden;
+}
+
+/* Card styling */
+.program-card {
+    max-width: 100%;
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #f06214;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.program-card:hover {
+    transform: scale(1.02);
+}
+
+.program-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.program-card .topics {
+    padding-left: 1.5rem;
+}
+
+/****************************** Contact Page *******************************/
+/* Container for Form and Cards */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;        /* ← prevents overflow */
+}
+
+#contactForm,
+.contact-cards {
+  max-width: 100%;    /* ← prevents flex overflow */
+}
+
+#contactForm label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #f06214;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#contactForm button {
+  background-color: #c6d812;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #f06214;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#contactForm button:hover {
+  background-color: #fff;
+}
+
+/* Contact Cards Styling */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1 1 200px;
+  max-width: 400px;
+}
+
+/* Cards animation on initial load */
+.contact-cards .card {
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #f06214;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  /* initial state for animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+/* Stagger animation for each card */
+.contact-cards .card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.contact-cards .card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.contact-cards .card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes for fade-in & slide-up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate buttons inside cards */
+.contact-cards .card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #c6d812;
+  border-radius: 6px;
+  border: 1px solid #f06214;
+  cursor: pointer;
+  font-size: 1rem;
+
+  /* initial animation state */
+  opacity: 0;
+  transform: scale(0.9);
+  animation: buttonPop 0.5s forwards;
+}
+
+/* Stagger button animation slightly after card */
+.contact-cards .card:nth-child(1) button {
+  animation-delay: 0.5s;
+}
+.contact-cards .card:nth-child(2) button {
+  animation-delay: 0.7s;
+}
+.contact-cards .card:nth-child(3) button {
+  animation-delay: 0.9s;
+}
+
+/* Keyframes for button pop-in */
+@keyframes buttonPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover & focus effects on cards */
+.contact-cards .card:hover,
+.contact-cards .card:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.contact-cards .card button:hover {
+  background-color: #fff;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  /* Optional modal fade-in */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: modalFadeIn 0.3s forwards;
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal a {
+  padding: 10px 16px;
+  background: #c6d812;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/******************************** Footer ***************************************/
+footer.footer {
+  position: relative;
+}
+
+.footer {
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+.footer-column {
+  padding: 0.5rem;
+}
+
+.footer-column.left {
+  text-align: left;
+}
+
+.footer-column.right {
+  text-align: right;
+}
+
+.footer-column.middle a {
+  margin: 0 0.5rem;
+}
+
+.footer-column.middle img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.footer-column.middle img:hover {
+  transform: scale(1.2);
+}
