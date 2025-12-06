@@ -5,21 +5,21 @@ initModals();
 const form = document.getElementById('contactForm');
 const timestampField = document.getElementById('timestamp');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // prevent default redirect
-
-  // Update timestamp
-  timestampField.value = new Date().toISOString();
-
-  // Convert form data to plain object
-  const formData = new FormData(form);
-  const data = {};
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
+async function handleFormSubmit(e) {
+  e.preventDefault(); // Prevent default form redirect
 
   try {
-    // Send data to Web3Forms via fetch
+    // Update timestamp
+    timestampField.value = new Date().toISOString();
+
+    // Convert form data to plain object
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    // Send data to Web3Forms
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
@@ -28,17 +28,22 @@ form.addEventListener('submit', async (e) => {
     const result = await response.json();
 
     if (result.success) {
-      // Store data in sessionStorage for thank-you page
+      // Store data for thank-you page
       sessionStorage.setItem('contactData', JSON.stringify(data));
 
-      // Redirect after successful submission
+      // Redirect to thank-you page
       window.location.href = 'thankyou.html';
     } else {
-      alert('Oops! Something went wrong. Please try again.');
       console.error(result);
+      alert('Oops! Something went wrong. Please try again.');
     }
-  } catch (err) {
+
+  } catch (error) {
+    console.error(error);
     alert('An error occurred. Please try again later.');
-    console.error(err);
   }
-});
+}
+
+// Attach event listener
+form.addEventListener('submit', handleFormSubmit);
+
