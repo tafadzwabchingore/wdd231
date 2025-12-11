@@ -31,6 +31,12 @@
     display: block;
   }
 
+/* Smaller screens */
+  .hero {
+    height: 300px; /* adjust height for small screens */
+    background-image: url('images/hero-small.jpg'); /* smaller, responsive image */
+  }
+
   .footer {
     grid-template-columns: 1fr;
     text-align: center;
